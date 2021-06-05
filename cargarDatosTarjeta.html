@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Datos De Tajerta</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/tarjeta.js"></script>
+    <link rel="stylesheet" href="./Estilos/tarjeta.css">
+</head>
+<body>
+    <div class="tips"  >
+        Numero de Tarjeta de Pago: (4) VISA, (51 -> 55) MasterCard, (36-38-39) DinersClub, (34-37) American Express, (65) Discover, (5019) dankort
+        </div>
+       <form action="" method="post">
+        <div class="container">
+          <div class="col1">
+            <div class="card">
+              <div class="front">
+                <div class="type">
+                  <img class="bankid"/>
+                </div>
+                <span class="chip"></span>
+                <span class="card_number">&#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; </span>
+                <div class="date"><span class="date_value">MM / YYYY</span></div>
+                <span class="fullname">NOMBRE TÍTULAR</span>
+              </div>
+              <div class="back">
+                <div class="magnetic"></div>
+                <div class="bar"></div>
+                <span class="seccode">&#x25CF;&#x25CF;&#x25CF;</span>
+                <span class="chip"></span><span class="disclaimer"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="col2">
+            <label>Número de Tarjeta</label>
+            <input class="number" type="text" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+            <label>Nombre Títular</label>
+            <input class="inputname" type="text" placeholder=""/>
+            <label>Expira</label>
+            <input class="expire" type="text" placeholder="MM / YYYY"/>
+            <label>Códido de Seguridad</label>
+            <input class="ccv" type="text" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+            <button class="aceptar"><i class="material-icons"></i> Aceptar</button>
+          </div>
+        </div>
+    </form> 
+</body>
+</html>
